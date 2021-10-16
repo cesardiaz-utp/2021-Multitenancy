@@ -16,7 +16,6 @@
         @change="changeTenant()"
       ></v-select>
     </v-toolbar-title>
-
   </v-app-bar>
 </template>
 
@@ -29,13 +28,18 @@ export default {
       tenants: [
         { name: "BMW", code: "bmw" },
         { name: "Volkswagen", code: "vw" },
+        { name: "Chevrolet", code: "chv" },
       ],
     };
   },
   methods: {
     changeTenant() {
-      this.$emit("change-tenant", this.tenant);
+      sessionStorage.setItem("tenant", this.tenant);
+      this.$emit("change-tenant");
     },
   },
+  created(){
+    this.tenant = sessionStorage.getItem("tenant");
+  }
 };
 </script>

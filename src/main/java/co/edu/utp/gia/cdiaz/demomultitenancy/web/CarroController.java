@@ -15,7 +15,7 @@ import co.edu.utp.gia.cdiaz.demomultitenancy.modelo.entidades.Carro;
 import co.edu.utp.gia.cdiaz.demomultitenancy.modelo.repositorios.CarroRepository;
 
 @RestController
-@RequestMapping("/cars")
+@RequestMapping("/api/cars")
 public class CarroController {
 
     private CarroRepository repository;

@@ -15,4 +15,9 @@ tenants:
       driver: org.h2.Driver
       username: sa
       password: password
+    chv:
+      url: jdbc:h2:file:./chvdb
+      driver: org.h2.Driver
+      username: sa
+      password: password
       
